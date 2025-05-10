@@ -34,9 +34,9 @@ func TestGetAPIKey_Missing(t *testing.T) {
 
 	_, err := GetAPIKey(req.Header)
 	if err != nil {
-		// if err == ErrNoAuthHeaderIncluded {
-		// 	return
-		// }
+		if err == ErrNoAuthHeaderIncluded {
+			return
+		}
 		t.Errorf("error getting API key: %v", err)
 	}
 }
