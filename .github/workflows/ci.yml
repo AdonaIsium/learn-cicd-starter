@@ -23,7 +23,7 @@ jobs:
 
   style:
     name: Style
-    runs-on: ubunti-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Style
